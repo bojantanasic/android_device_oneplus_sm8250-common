@@ -141,6 +141,8 @@ blob_fixups: blob_fixups_user_type = {
         .call(blob_fixup_nop_call, 'bl', '__cfi_check', '_ZN7android8hardware22configureRpcThreadpoolEmb@plt'),
     'vendor/lib64/libAncSegBaseSdk.so|vendor/lib64/libaps_frame_registration.so|vendor/lib64/libyuv2.so': blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'odm/lib/libdlbdsservice_v3_6.so|odm/lib/libstagefright_soft_ddpdec.so|odm/lib/libstagefrightdolby.so|odm/lib64/libdlbdsservice_v3_6.so': blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
