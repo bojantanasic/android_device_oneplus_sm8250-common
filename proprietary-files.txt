@@ -472,7 +472,7 @@ vendor/etc/Oppo_QC_LTM_Commercial_SM8250_2020_01_15.pfm
 vendor/lib64/libhdr_tm.so
 
 # Display (HWC)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_CHECKELF;MAKE_COPY_RULE;MODULE_SUFFIX=_vendor
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;MAKE_COPY_RULE;MODULE_SUFFIX=_vendor
 vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libhistogram.so;MAKE_COPY_RULE;MODULE_SUFFIX=_vendor
 vendor/lib64/libqdutils.so
@@ -883,7 +883,7 @@ odm/lib64/libpwiriscalibrate.so
 odm/lib64/libpwirisfeature.so;MODULE_SUFFIX=_odm
 odm/lib64/libpwirishalwrapper.so;MODULE_SUFFIX=_odm
 odm/lib64/libpwirispq.so
-odm/lib64/libpwirisservice.so;DISABLE_CHECKELF
+odm/lib64/libpwirisservice.so
 odm/lib64/libpwirissoft.so
 odm/lib64/libpwsnapdragoncolor.so
 odm/lib64/libpwsoftirisPCS.so
