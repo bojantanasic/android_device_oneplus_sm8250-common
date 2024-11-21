@@ -432,8 +432,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
-# Inherit from the OnePlus Camera makefile.
-$(call inherit-product, vendor/oneplus/camera/camera-vendor.mk)
+# Camera
+#$(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
