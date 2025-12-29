@@ -401,9 +401,6 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
-# Camera
-$(call soong_config_set,camera,override_format_from_reserved,$(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED))
-
 # Speed compiler filter    
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
