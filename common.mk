@@ -128,7 +128,7 @@ PRODUCT_COPY_FILES += \
 
 # Dolby
 PRODUCT_PACKAGES += \
-    OplusDolby
+    DolbyAtmos
 
 # DRM
 PRODUCT_PACKAGES += \
