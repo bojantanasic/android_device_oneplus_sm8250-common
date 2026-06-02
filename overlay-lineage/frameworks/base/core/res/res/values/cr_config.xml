@@ -15,10 +15,6 @@
      limitations under the License.
 -->
 <resources>
-
-    <!-- Whether devices suports in-display fingerprint when screen is off -->
-    <bool name="config_supportScreenOffUdfps">false</bool>
-
     <!-- Any package that has one of the package names defined below will be prevented
        from using specific sensors in order to stop battery drain -->
     <string-array name="config_blockPackagesSensorDrain">
@@ -55,12 +51,6 @@
         <item>com.gaana</item>
         <item>com.facebook.katana.LoginActivity</item>
     </string-array>
-
-    <!-- Whether device supports in-display fingerprint -->
-    <bool name="config_supportsUdfps">true</bool>
-
-    <!-- Whether devices suports in-display fingerprint when screen is off -->
-    <bool name="config_supportsScreenOffUdfps">true</bool>
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_supportSmartPixels">true</bool>
