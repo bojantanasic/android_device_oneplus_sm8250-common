@@ -5,10 +5,10 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1804800",
-        "1478400",
-        "1228800",
-        "960000",
+        "1612800",
+        "1516800",
+        "1344000",
+        "1075200",
         "883200"
       ],
       "DefaultIndex": 0,
@@ -18,8 +18,9 @@
       "Name": "CPULittleClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
-        "9999999", 
-        "1228800", 
+        "9999999",
+        "1171200",
+        "1075200",
         "691200"
       ],
       "ResetOnInit": true
@@ -29,11 +30,11 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "2419200",
-        "2054400",
-        "1804800",
+        "2150400",
+        "1958400",
+        "1766400",
         "1478400",
-        "1113600",
+        "1056000",
         "825600"
       ],
       "DefaultIndex": 0,
@@ -44,8 +45,11 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
+        "2150400",
+        "1958400",
+        "1766400",
         "1478400",
-        "1113600",
+        "1286400",
         "710400"
       ],
       "ResetOnInit": true
@@ -55,11 +59,10 @@
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "2841600",
-        "2419200",
-        "2112000",
-        "1804800",
-        "1267200",
+        "2649600",
+        "1862400",
+        "1747200",
+        "1305600",
         "960000"
       ],
       "DefaultIndex": 0,
@@ -70,7 +73,11 @@
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "1267200",
+        "2649600",
+        "1862400",
+        "1747200",
+        "1190400",
+        "960000",
         "844800"
       ],
       "ResetOnInit": true
@@ -80,8 +87,7 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/max_pwrlevel",
       "Values": [
         "0",
-        "3",
-        "5"
+        "1"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -91,7 +97,10 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/min_pwrlevel",
       "Values": [
         "0",
+        "1",
+        "2",
         "3",
+        "4",
         "5"
       ],
       "ResetOnInit": true
@@ -110,9 +119,7 @@
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
         "1",
-        "15",
-        "28",
-        "40"
+        "28"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -179,32 +186,20 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "TAUClampBoost",
-      "Duration": 120,
-      "Value": "15"
+      "Duration": 0,
+      "Value": "28"
     },
-{
-      "PowerHint": "INTERACTION",
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 3000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 120,
-      "Value": "1228800"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 120,
-      "Value": "1113600"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUBigClusterMinFreq",
       "Duration": 3000,
-      "Value": "1478400"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUBigPlusClusterMinFreq",
-      "Duration": 3000,
-      "Value": "1267200"
+      "Value": "9999999"
     },
     {
       "PowerHint": "LAUNCH",
@@ -215,8 +210,8 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "TAUClampBoost",
-      "Duration": 3000,
-      "Value": "40"
+      "Duration": 5000,
+      "Value": "28"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -389,32 +384,26 @@
     {
       "PowerHint": "LOW_POWER",
       "Node": "CPULittleClusterMaxFreq",
-      "Duration": 0,
+      "Duration": 3600000,
       "Value": "883200"
     },
     {
       "PowerHint": "LOW_POWER",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
+      "Duration": 3600000,
       "Value": "691200"
     },
     {
       "PowerHint": "LOW_POWER",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 0,
+      "Duration": 3600000,
       "Value": "825600"
     },
     {
       "PowerHint": "LOW_POWER",
       "Node": "CPUBigPlusClusterMaxFreq",
-      "Duration": 0,
+      "Duration": 3600000,
       "Value": "960000"
-    }
-    {
-      "PowerHint": "LOW_POWER",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "5"
     }
   ]
 }
